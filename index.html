@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Heart of Iron 4</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<style type="text/css">
+		.flags{
+			height: 50px;
+			width: 100px;
+		}
+		.event{
+			height: 500px;
+			width: 500px;
+			background-color: yellow;
+		}
+	</style>
+</head>
+<body>
+<div class="startmenu col-12 bg-danger" style="height: 721px">
+
+	<img src="pipecvsem.png" style="height: 721px; width: 1520px;">
+		<div class="flags ger" style="position: absolute; top: 325px; left: 575px">
+			
+		</div>
+		<div class="flags usa" style="position: absolute; top: 150px; left: 30px">
+			<img src="capitalismewwww.webp" style="height: 50px; width:100px">
+		</div>
+		<div class="uk" style="position: absolute; top: 175px; left: 250px; height: 150px; width: 300px;">
+		
+		</div>
+		<div class="ussr" style="position: absolute; top: 190px; left: 1000px; height: 250px; width: 500px">
+		
+		</div>
+		<div class="france" style="position: absolute; top: 370px; left: 325px; height: 100px; width: 200px">
+			
+		</div>
+		<div class="italy" style="position: absolute; top: 440px; left: 525px; height: 150px; width: 200px">
+			
+		</div>
+		<div class="poland" style="position: absolute; top: 330px; left: 800px; height: 75px; width: 150px">
+			
+		</div>
+		<div class="flags etc" style="position: absolute; top: 220px; left: 30px; background-color: grey; height: 180px">
+			<h6>Нажатие только на: Германия, США, Британия, СССР, Франция, Италия, Польша.</h6>
+		</div>
+</div>
+<!--usa-->
+<!--atack card-->
+<div class="usi col-12 bg-secondary" style="height: 1442px; display: none;">
+	<div class="plan bg-secondary col-5 mx-auto" style="height: 420px;">
+		<h6 style="text-align: center;">Планирование атак</h6>
+		<div class="" style="border: solid; black">
+			
+		</div>
+		<div class="window bg-light col-12 mx-auto" style="height: 250px">
+			
+		</div>
+		<div class="unitsselect" style="border: solid;black; margin-top: 10px">
+			
+		</div>
+		<h6 style="text-align: center;">Доступные войска</h6>
+		<div class="units col-12 bg-secondary" style="height: 100px; display: flex">
+			<div class="place1 col-1 bg-light" style="height: 70px;">
+				
+			</div>
+			<div class="place2 col-1 bg-light" style="height: 70px; margin-left: 5px">
+				
+			</div>
+			<div class="place3 col-1 bg-light" style="height: 70px; margin-left: 5px">
+				
+			</div>
+			<div class="tank1 col-2 bg-light" style="height: 70px; margin-left: 5px">
+				
+			</div>
+			<div class="tank2 col-2 bg-light" style="height: 70px; margin-left: 5px">
+				
+			</div>
+			<div class="tank3 col-2 bg-light" style="height: 70px; margin-left: 5px">
+				
+			</div>
+			<div class="artillery1 col-1 bg-light" style="height: 70px; margin-left: 5px">
+				
+			</div>
+			<div class="artillery2 col-1 bg-light" style="height: 70px; margin-left: 5px">
+				
+			</div>
+		</div>
+	</div>
+	<div class="create col-5 bg-secondary mx-auto" style="height: 301px; display: flex">
+		<div class="createt col-4 bg-secondary" style="height: 260px;">
+			<div class="col-12 bg-white" style="height: 112px">
+				<img src="каска.png" style="height: 50px; width: 50px; margin-right: 20px">
+			</div>
+			<p>Для создания этой боевой единицы необходимы 10 винтовок и снаряжение 10 единиц</p>
+		</div>
+		<div class="createv col-4 bg-secondary" style="height: 260px;">
+			<div class="col-12 bg-white" style="height: 112px">
+				<img src="танк.png" style="height: 100px; width: 100px; margin-right: 20px">
+			</div>
+			<p>Для создания этой боевой единицы необходимы 100 единиц железа и снаряжение 200 единиц</p>
+		</div>
+		<div class="createa col-4 bg-secondary" style="height: 260px;">
+			<div class="col-12 bg-white" style="height: 112px">
+				<img src="арта2.jpg" style="height: 100px; width: 100px; margin-right: 20px">
+			</div>
+			<p>Для создания этой боевой единицы необходимы 20 единиц железа и снаряжение 20 единиц</p>
+		</div>
+	</div>
+	<!--resources-->
+	<div class="factory col-5 bg-secondary mx-auto " style="height: 400px">
+		<h6 style="text-align: center;">Ресурсы и Заводы</h6>
+		<div style="border: solid;black;">
+			
+		</div>
+		<div class="main" style="display: flex">
+			<div class="fabrika col-4 bg-light" style="height: 300px">
+				<p style="text-align: center;">Фабрики</p>
+				<p style="text-align: center;">Сейчас <span class="elem1">5</span></p>
+				<button class="btn" style="display: none">построить</button>
+				<p style="text-align: center;">Чтобы построить нужно 200 материалов</p>
+			</div>
+			<div class="zavody col-4 bg-light" style="height: 300px">
+				<p style="text-align: center;">Заводы</p>
+				<p style="text-align: center;">Сейчас <span class="elem2">5</span></p>
+				<button class="btn1" style="display: none">построить</button>
+				<p style="text-align: center;">Чтобы построить нужно 100 материалов</p>
+			</div>
+			<div class="shaft col-4 bg-light" style="height: 300px">
+				<p style="text-align: center;">Шахты</p>
+				<p style="text-align: center;">Сейчас <span class="elem3">10</span></p>
+				<button class="btn2" style="display: none">построить</button>
+				<p style="text-align: center;">Чтобы построить нужно 10 материалов</p>
+			</div>
+		</div>
+		<div style="border: solid;black; margin-top: 10px">
+			
+		</div>
+		<h6 style="text-align: center; ">Ресурсы</h6>
+		<div class="score col-12 mx-auto row" style="height: 50px; margin-top: 10px">
+			<div class="metal col-3 bg-light" style="height: 50px">
+				<h6>Железо</h6>
+				<span style="text-align: center;" class="iron">100</span>
+			</div>	
+			<div class="rifle col-3 bg-light" style="height: 50px">
+				<h6>Винтовки</h6>
+				<span style="text-align: center;" class="rifles">100</span>
+			</div>	
+			<div class="material col-3 bg-light" style="height: 50px">
+				<h6>Материалы</h6>
+				<span style="text-align: center;" class="material">100</span>
+			</div>	
+			<div class="equipment col-3 bg-light" style="height: 50px">
+				<h6>Снаряжение</h6>
+				<span style="text-align: center;" class="snaryaga">100</span>
+			</div>	
+		</div>
+	</div>
+</div>
+
+<!--germany-->
+<!--atack card-->
+<div class="gei col-12 bg-secondary" style="height: 1442px; display: none;">
+	<div class="plan bg-secondary col-5 mx-auto" style="height: 420px;">
+		<h6 style="text-align: center;">Планирование атак</h6>
+		<div class="" style="border: solid; black">
+			
+		</div>
+		<div class="window bg-light col-12 mx-auto" style="height: 250px">
+			
+		</div>
+		<div class="unitsselect" style="border: solid;black; margin-top: 10px">
+			
+		</div>
+		<h6 style="text-align: center;">Доступные войска</h6>
+		<div class="units col-12 bg-secondary" style="height: 100px; display: flex">
+			<div class="place1 col-1 bg-light" style="height: 70px;">
+				
+			</div>
+			<div class="place2 col-1 bg-light" style="height: 70px; margin-left: 5px">
+				
+			</div>
+			<div class="place3 col-1 bg-light" style="height: 70px; margin-left: 5px">
+				
+			</div>
+			<div class="tank1 col-2 bg-light" style="height: 70px; margin-left: 5px">
+				
+			</div>
+			<div class="tank2 col-2 bg-light" style="height: 70px; margin-left: 5px">
+				
+			</div>
+			<div class="tank3 col-2 bg-light" style="height: 70px; margin-left: 5px">
+				
+			</div>
+			<div class="artillery1 col-1 bg-light" style="height: 70px; margin-left: 5px">
+				
+			</div>
+			<div class="artillery2 col-1 bg-light" style="height: 70px; margin-left: 5px">
+				
+			</div>
+		</div>
+	</div>
+	<div class="create col-5 bg-secondary mx-auto" style="height: 301px; display: flex">
+		<div class="createt col-4 bg-secondary" style="height: 260px;">
+			<div class="col-12 bg-white" style="height: 112px">
+				<img src="каска.png" style="height: 50px; width: 50px; margin-right: 20px">
+			</div>
+			<p>Для создания этой боевой единицы необходимы 10 винтовок и снаряжение 10 единиц</p>
+		</div>
+		<div class="createv col-4 bg-secondary" style="height: 260px;">
+			<div class="col-12 bg-white" style="height: 112px">
+				<img src="танк.png" style="height: 100px; width: 100px; margin-right: 20px">
+			</div>
+			<p>Для создания этой боевой единицы необходимы 100 единиц железа и снаряжение 200 единиц</p>
+		</div>
+		<div class="createa col-4 bg-secondary" style="height: 260px;">
+			<div class="col-12 bg-white" style="height: 112px">
+				<img src="арта2.jpg" style="height: 100px; width: 100px; margin-right: 20px">
+			</div>
+			<p>Для создания этой боевой единицы необходимы 20 единиц железа и снаряжение 20 единиц</p>
+		</div>
+	</div>
+	<!--resources-->
+	<div class="factory col-5 bg-secondary mx-auto " style="height: 400px">
+		<h6 style="text-align: center;">Ресурсы и Заводы</h6>
+		<div style="border: solid;black;">
+			
+		</div>
+		<div class="main" style="display: flex">
+			<div class="fabrika col-4 bg-light" style="height: 300px">
+				<p style="text-align: center;">Фабрики</p>
+				<p style="text-align: center;">Сейчас <span class="elem1">5</span></p>
+				<button class="btn" style="display: none">построить</button>
+				<p style="text-align: center;">Чтобы построить нужно 200 материалов</p>
+			</div>
+			<div class="zavody col-4 bg-light" style="height: 300px">
+				<p style="text-align: center;">Заводы</p>
+				<p style="text-align: center;">Сейчас <span class="elem2">5</span></p>
+				<button class="btn1" style="display: none">построить</button>
+				<p style="text-align: center;">Чтобы построить нужно 100 материалов</p>
+			</div>
+			<div class="shaft col-4 bg-light" style="height: 300px">
+				<p style="text-align: center;">Шахты</p>
+				<p style="text-align: center;">Сейчас <span class="elem3">10</span></p>
+				<button class="btn2" style="display: none">построить</button>
+				<p style="text-align: center;">Чтобы построить нужно 10 материалов</p>
+			</div>
+		</div>
+		<div style="border: solid;black; margin-top: 10px">
+			
+		</div>
+		<h6 style="text-align: center; ">Ресурсы</h6>
+		<div class="score col-12 mx-auto row" style="height: 50px; margin-top: 10px">
+			<div class="metal col-3 bg-light" style="height: 50px">
+				<h6>Железо</h6>
+				<span style="text-align: center;">100</span>
+			</div>	
+			<div class="rifle col-3 bg-light" style="height: 50px">
+				<h6>Винтовки</h6>
+				<span style="text-align: center;">100</span>
+			</div>	
+			<div class="material col-3 bg-light" style="height: 50px">
+				<h6>Материалы</h6>
+				<span style="text-align: center;">100</span>
+			</div>	
+			<div class="equipment col-3 bg-light" style="height: 50px">
+				<h6>Снаряжение</h6>
+				<span style="text-align: center;">100</span>
+			</div>	
+		</div>
+	</div>
+</div>
+
+<!--UK-->
+<!--atack card-->
+<div class="uki col-12 bg-secondary" style="height: 1442px; display: none;">
+	<div class="plan bg-secondary col-5 mx-auto" style="height: 420px;">
+		<h6 style="text-align: center;">Планирование атак</h6>
+		<div class="" style="border: solid; black">
+			
+		</div>
+		<div class="window bg-light col-12 mx-auto" style="height: 250px">
+			
+		</div>
+		<div class="unitsselect" style="border: solid;black; margin-top: 10px">
+			
+		</div>
+		<h6 style="text-align: center;">Доступные войска</h6>
+		<div class="units col-12 bg-secondary" style="height: 100px; display: flex">
+			<div class="place1 col-1 bg-light" style="height: 70px;">
+				
+			</div>
+			<div class="place2 col-1 bg-light" style="height: 70px; margin-left: 5px">
+				
+			</div>
+			<div class="place3 col-1 bg-light" style="height: 70px; margin-left: 5px">
+				
+			</div>
+			<div class="tank1 col-2 bg-light" style="height: 70px; margin-left: 5px">
+				
+			</div>
+			<div class="tank2 col-2 bg-light" style="height: 70px; margin-left: 5px">
+				
+			</div>
+			<div class="tank3 col-2 bg-light" style="height: 70px; margin-left: 5px">
+				
+			</div>
+			<div class="artillery1 col-1 bg-light" style="height: 70px; margin-left: 5px">
+				
+			</div>
+			<div class="artillery2 col-1 bg-light" style="height: 70px; margin-left: 5px">
+				
+			</div>
+		</div>
+	</div>
+	<div class="create col-5 bg-secondary mx-auto" style="height: 301px; display: flex">
+		<div class="createt col-4 bg-secondary" style="height: 260px;">
+			<div class="col-12 bg-white" style="height: 112px">
+				<img src="каска.png" style="height: 50px; width: 50px; margin-right: 20px">
+			</div>
+			<p>Для создания этой боевой единицы необходимы 10 винтовок и снаряжение 10 единиц</p>
+		</div>
+		<div class="createv col-4 bg-secondary" style="height: 260px;">
+			<div class="col-12 bg-white" style="height: 112px">
+				<img src="танк.png" style="height: 100px; width: 100px; margin-right: 20px">
+			</div>
+			<p>Для создания этой боевой единицы необходимы 100 единиц железа и снаряжение 200 единиц</p>
+		</div>
+		<div class="createa col-4 bg-secondary" style="height: 260px;">
+			<div class="col-12 bg-white" style="height: 112px">
+				<img src="арта2.jpg" style="height: 100px; width: 100px; margin-right: 20px">
+			</div>
+			<p>Для создания этой боевой единицы необходимы 20 единиц железа и снаряжение 20 единиц</p>
+		</div>
+	</div>
+	<!--resources-->
+	<div class="factory col-5 bg-secondary mx-auto " style="height: 400px">
+		<h6 style="text-align: center;">Ресурсы и Заводы</h6>
+		<div style="border: solid;black;">
+			
+		</div>
+		<div class="main" style="display: flex">
+			<div class="fabrika col-4 bg-light" style="height: 300px">
+				<p style="text-align: center;">Фабрики</p>
+				<p style="text-align: center;">Сейчас <span class="elem1">5</span></p>
+				<button class="btn" style="display: none">построить</button>
+				<p style="text-align: center;">Чтобы построить нужно 200 материалов</p>
+			</div>
+			<div class="zavody col-4 bg-light" style="height: 300px">
+				<p style="text-align: center;">Заводы</p>
+				<p style="text-align: center;">Сейчас <span class="elem2">5</span></p>
+				<button class="btn1" style="display: none">построить</button>
+				<p style="text-align: center;">Чтобы построить нужно 100 материалов</p>
+			</div>
+			<div class="shaft col-4 bg-light" style="height: 300px">
+				<p style="text-align: center;">Шахты</p>
+				<p style="text-align: center;">Сейчас <span class="elem3">10</span></p>
+				<button class="btn2" style="display: none">построить</button>
+				<p style="text-align: center;">Чтобы построить нужно 10 материалов</p>
+			</div>
+		</div>
+		<div style="border: solid;black; margin-top: 10px">
+			
+		</div>
+		<h6 style="text-align: center; ">Ресурсы</h6>
+		<div class="score col-12 mx-auto row" style="height: 50px; margin-top: 10px">
+			<div class="metal col-3 bg-light" style="height: 50px">
+				<h6>Железо</h6>
+				<span style="text-align: center;">100</span>
+			</div>	
+			<div class="rifle col-3 bg-light" style="height: 50px">
+				<h6>Винтовки</h6>
+				<span style="text-align: center;">100</span>
+			</div>	
+			<div class="material col-3 bg-light" style="height: 50px">
+				<h6>Материалы</h6>
+				<span style="text-align: center;">100</span>
+			</div>	
+			<div class="equipment col-3 bg-light" style="height: 50px">
+				<h6>Снаряжение</h6>
+				<span style="text-align: center;">100</span>
+			</div>	
+		</div>
+	</div>
+</div>
+
+<!--USSR-->
+<!--atack card-->
+<div class="ussri col-12 bg-secondary" style="height: 1442px; display: none;">
+	<div class="plan bg-secondary col-5 mx-auto" style="height: 420px;">
+		<h6 style="text-align: center;">Планирование атак</h6>
+		<div class="" style="border: solid; black">
+			
+		</div>
+		<div class="window bg-light col-12 mx-auto" style="height: 250px">
+			
+		</div>
+		<div class="unitsselect" style="border: solid;black; margin-top: 10px">
+			
+		</div>
+		<h6 style="text-align: center;">Доступные войска</h6>
+		<div class="units col-12 bg-secondary" style="height: 100px; display: flex">
+			<div class="place1 col-1 bg-light" style="height: 70px;">
+				
+			</div>
+			<div class="place2 col-1 bg-light" style="height: 70px; margin-left: 5px">
+				
+			</div>
+			<div class="place3 col-1 bg-light" style="height: 70px; margin-left: 5px">
+				
+			</div>
+			<div class="tank1 col-2 bg-light" style="height: 70px; margin-left: 5px">
+				
+			</div>
+			<div class="tank2 col-2 bg-light" style="height: 70px; margin-left: 5px">
+				
+			</div>
+			<div class="tank3 col-2 bg-light" style="height: 70px; margin-left: 5px">
+				
+			</div>
+			<div class="artillery1 col-1 bg-light" style="height: 70px; margin-left: 5px">
+				
+			</div>
+			<div class="artillery2 col-1 bg-light" style="height: 70px; margin-left: 5px">
+				
+			</div>
+		</div>
+	</div>
+	<div class="create col-5 bg-secondary mx-auto" style="height: 301px; display: flex">
+		<div class="createt col-4 bg-secondary" style="height: 260px;">
+			<div class="col-12 bg-white" style="height: 112px">
+				<img src="каска.png" style="height: 50px; width: 50px; margin-right: 20px">
+			</div>
+			<p>Для создания этой боевой единицы необходимы 10 винтовок и снаряжение 10 единиц</p>
+		</div>
+		<div class="createv col-4 bg-secondary" style="height: 260px;">
+			<div class="col-12 bg-white" style="height: 112px">
+				<img src="танк.png" style="height: 100px; width: 100px; margin-right: 20px">
+			</div>
+			<p>Для создания этой боевой единицы необходимы 100 единиц железа и снаряжение 200 единиц</p>
+		</div>
+		<div class="createa col-4 bg-secondary" style="height: 260px;">
+			<div class="col-12 bg-white" style="height: 112px">
+				<img src="арта2.jpg" style="height: 100px; width: 100px; margin-right: 20px">
+			</div>
+			<p>Для создания этой боевой единицы необходимы 20 единиц железа и снаряжение 20 единиц</p>
+		</div>
+	</div>
+	<!--resources-->
+	<div class="factory col-5 bg-secondary mx-auto " style="height: 400px">
+		<h6 style="text-align: center;">Ресурсы и Заводы</h6>
+		<div style="border: solid;black;">
+			
+		</div>
+		<div class="main" style="display: flex">
+			<div class="fabrika col-4 bg-light" style="height: 300px">
+				<p style="text-align: center;">Фабрики</p>
+				<p style="text-align: center;">Сейчас <span class="elem1">5</span></p>
+				<button class="btn" style="display: none">построить</button>
+				<p style="text-align: center;">Чтобы построить нужно 200 материалов</p>
+			</div>
+			<div class="zavody col-4 bg-light" style="height: 300px">
+				<p style="text-align: center;">Заводы</p>
+				<p style="text-align: center;">Сейчас <span class="elem2">5</span></p>
+				<button class="btn1" style="display: none">построить</button>
+				<p style="text-align: center;">Чтобы построить нужно 100 материалов</p>
+			</div>
+			<div class="shaft col-4 bg-light" style="height: 300px">
+				<p style="text-align: center;">Шахты</p>
+				<p style="text-align: center;">Сейчас <span class="elem3">10</span></p>
+				<button class="btn2" style="display: none">построить</button>
+				<p style="text-align: center;">Чтобы построить нужно 10 материалов</p>
+			</div>
+		</div>
+		<div style="border: solid;black; margin-top: 10px">
+			
+		</div>
+		<h6 style="text-align: center; ">Ресурсы</h6>
+		<div class="score col-12 mx-auto row" style="height: 50px; margin-top: 10px">
+			<div class="metal col-3 bg-light" style="height: 50px">
+				<h6>Железо</h6>
+				<span style="text-align: center;" class="iron">100</span>
+			</div>	
+			<div class="rifle col-3 bg-light" style="height: 50px">
+				<h6>Винтовки</h6>
+				<span style="text-align: center;" class="rifles">100</span>
+			</div>	
+			<div class="material col-3 bg-light" style="height: 50px">
+				<h6>Материалы</h6>
+				<span style="text-align: center;" class="material">100</span>
+			</div>	
+			<div class="equipment col-3 bg-light" style="height: 50px">
+				<h6>Снаряжение</h6>
+				<span style="text-align: center;" class="snaryaga">100</span>
+			</div>	
+		</div>
+	</div>
+</div>
+
+
+<div class="fri col-12 bg-secondary" style="height: 1442px; display: none;">
+	<div class="plan bg-secondary col-5 mx-auto" style="height: 420px;">
+		<h6 style="text-align: center;">Планирование атак</h6>
+		<div class="" style="border: solid; black">
+			
+		</div>
+		<div class="window bg-light col-12 mx-auto" style="height: 250px">
+			
+		</div>
+		<div class="unitsselect" style="border: solid;black; margin-top: 10px">
+			
+		</div>
+		<h6 style="text-align: center;">Доступные войска</h6>
+		<div class="units col-12 bg-secondary" style="height: 100px; display: flex">
+			<div class="place1 col-1 bg-light" style="height: 70px;">
+				
+			</div>
+			<div class="place2 col-1 bg-light" style="height: 70px; margin-left: 5px">
+				
+			</div>
+			<div class="place3 col-1 bg-light" style="height: 70px; margin-left: 5px">
+				
+			</div>
+			<div class="tank1 col-2 bg-light" style="height: 70px; margin-left: 5px">
+				
+			</div>
+			<div class="tank2 col-2 bg-light" style="height: 70px; margin-left: 5px">
+				
+			</div>
+			<div class="tank3 col-2 bg-light" style="height: 70px; margin-left: 5px">
+				
+			</div>
+			<div class="artillery1 col-1 bg-light" style="height: 70px; margin-left: 5px">
+				
+			</div>
+			<div class="artillery2 col-1 bg-light" style="height: 70px; margin-left: 5px">
+				
+			</div>
+		</div>
+	</div>
+	<div class="create col-5 bg-secondary mx-auto" style="height: 301px; display: flex">
+		<div class="createt col-4 bg-secondary" style="height: 260px;">
+			<div class="col-12 bg-white" style="height: 112px">
+				<img src="каска.png" style="height: 50px; width: 50px; margin-right: 20px">
+			</div>
+			<p>Для создания этой боевой единицы необходимы 10 винтовок и снаряжение 10 единиц</p>
+		</div>
+		<div class="createv col-4 bg-secondary" style="height: 260px;">
+			<div class="col-12 bg-white" style="height: 112px">
+				<img src="танк.png" style="height: 100px; width: 100px; margin-right: 20px">
+			</div>
+			<p>Для создания этой боевой единицы необходимы 100 единиц железа и снаряжение 200 единиц</p>
+		</div>
+		<div class="createa col-4 bg-secondary" style="height: 260px;">
+			<div class="col-12 bg-white" style="height: 112px">
+				<img src="арта2.jpg" style="height: 100px; width: 100px; margin-right: 20px">
+			</div>
+			<p>Для создания этой боевой единицы необходимы 20 единиц железа и снаряжение 20 единиц</p>
+		</div>
+	</div>
+	<!--resources-->
+	<div class="factory col-5 bg-secondary mx-auto " style="height: 400px">
+		<h6 style="text-align: center;">Ресурсы и Заводы</h6>
+		<div style="border: solid;black;">
+			
+		</div>
+		<div class="main" style="display: flex">
+			<div class="fabrika col-4 bg-light" style="height: 300px">
+				<p style="text-align: center;">Фабрики</p>
+				<p style="text-align: center;">Сейчас <span class="elem1">5</span></p>
+				<button class="btn" style="display: none">построить</button>
+				<p style="text-align: center;">Чтобы построить нужно 200 материалов</p>
+			</div>
+			<div class="zavody col-4 bg-light" style="height: 300px">
+				<p style="text-align: center;">Заводы</p>
+				<p style="text-align: center;">Сейчас <span class="elem2">5</span></p>
+				<button class="btn1" style="display: none">построить</button>
+				<p style="text-align: center;">Чтобы построить нужно 100 материалов</p>
+			</div>
+			<div class="shaft col-4 bg-light" style="height: 300px">
+				<p style="text-align: center;">Шахты</p>
+				<p style="text-align: center;">Сейчас <span class="elem3">10</span></p>
+				<button class="btn2" style="display: none">построить</button>
+				<p style="text-align: center;">Чтобы построить нужно 10 материалов</p>
+			</div>
+		</div>
+		<div style="border: solid;black; margin-top: 10px">
+			
+		</div>
+		<h6 style="text-align: center; ">Ресурсы</h6>
+		<div class="score col-12 mx-auto row" style="height: 50px; margin-top: 10px">
+			<div class="metal col-3 bg-light" style="height: 50px">
+				<h6>Железо</h6>
+				<span style="text-align: center;" class="iron">100</span>
+			</div>	
+			<div class="rifle col-3 bg-light" style="height: 50px">
+				<h6>Винтовки</h6>
+				<span style="text-align: center;" class="rifles">100</span>
+			</div>	
+			<div class="material col-3 bg-light" style="height: 50px">
+				<h6>Материалы</h6>
+				<span style="text-align: center;" class="material">100</span>
+			</div>	
+			<div class="equipment col-3 bg-light" style="height: 50px">
+				<h6>Снаряжение</h6>
+				<span style="text-align: center;" class="snaryaga">100</span>
+			</div>	
+		</div>
+	</div>
+</div>
+
+<div class="pli col-12 bg-secondary" style="height: 1442px; display: none;">
+	<div class="plan bg-secondary col-5 mx-auto" style="height: 420px;">
+		<h6 style="text-align: center;">Планирование атак</h6>
+		<div class="" style="border: solid; black">
+			
+		</div>
+		<div class="window bg-light col-12 mx-auto" style="height: 250px">
+			
+		</div>
+		<div class="unitsselect" style="border: solid;black; margin-top: 10px">
+			
+		</div>
+		<h6 style="text-align: center;">Доступные войска</h6>
+		<div class="units col-12 bg-secondary" style="height: 100px; display: flex">
+			<div class="place1 col-1 bg-light" style="height: 70px;">
+				
+			</div>
+			<div class="place2 col-1 bg-light" style="height: 70px; margin-left: 5px">
+				
+			</div>
+			<div class="place3 col-1 bg-light" style="height: 70px; margin-left: 5px">
+				
+			</div>
+			<div class="tank1 col-2 bg-light" style="height: 70px; margin-left: 5px">
+				
+			</div>
+			<div class="tank2 col-2 bg-light" style="height: 70px; margin-left: 5px">
+				
+			</div>
+			<div class="tank3 col-2 bg-light" style="height: 70px; margin-left: 5px">
+				
+			</div>
+			<div class="artillery1 col-1 bg-light" style="height: 70px; margin-left: 5px">
+				
+			</div>
+			<div class="artillery2 col-1 bg-light" style="height: 70px; margin-left: 5px">
+				
+			</div>
+		</div>
+	</div>
+	<div class="create col-5 bg-secondary mx-auto" style="height: 301px; display: flex">
+		<div class="createt col-4 bg-secondary" style="height: 260px;">
+			<div class="col-12 bg-white" style="height: 112px">
+				<img src="каска.png" style="height: 50px; width: 50px; margin-right: 20px">
+			</div>
+			<p>Для создания этой боевой единицы необходимы 10 винтовок и снаряжение 10 единиц</p>
+		</div>
+		<div class="createv col-4 bg-secondary" style="height: 260px;">
+			<div class="col-12 bg-white" style="height: 112px">
+				<img src="танк.png" style="height: 100px; width: 100px; margin-right: 20px">
+			</div>
+			<p>Для создания этой боевой единицы необходимы 100 единиц железа и снаряжение 200 единиц</p>
+		</div>
+		<div class="createa col-4 bg-secondary" style="height: 260px;">
+			<div class="col-12 bg-white" style="height: 112px">
+				<img src="арта2.jpg" style="height: 100px; width: 100px; margin-right: 20px">
+			</div>
+			<p>Для создания этой боевой единицы необходимы 20 единиц железа и снаряжение 20 единиц</p>
+		</div>
+	</div>
+	<!--resources-->
+	<div class="factory col-5 bg-secondary mx-auto " style="height: 400px">
+		<h6 style="text-align: center;">Ресурсы и Заводы</h6>
+		<div style="border: solid;black;">
+			
+		</div>
+		<div class="main" style="display: flex">
+			<div class="fabrika col-4 bg-light" style="height: 300px">
+				<p style="text-align: center;">Фабрики</p>
+				<p style="text-align: center;">Сейчас <span class="elem1">5</span></p>
+				<button class="btn" style="display: none">построить</button>
+				<p style="text-align: center;">Чтобы построить нужно 200 материалов</p>
+			</div>
+			<div class="zavody col-4 bg-light" style="height: 300px">
+				<p style="text-align: center;">Заводы</p>
+				<p style="text-align: center;">Сейчас <span class="elem2">5</span></p>
+				<button class="btn1" style="display: none">построить</button>
+				<p style="text-align: center;">Чтобы построить нужно 100 материалов</p>
+			</div>
+			<div class="shaft col-4 bg-light" style="height: 300px">
+				<p style="text-align: center;">Шахты</p>
+				<p style="text-align: center;">Сейчас <span class="elem3">10</span></p>
+				<button class="btn2" style="display: none">построить</button>
+				<p style="text-align: center;">Чтобы построить нужно 10 материалов</p>
+			</div>
+		</div>
+		<div style="border: solid;black; margin-top: 10px">
+			
+		</div>
+		<h6 style="text-align: center; ">Ресурсы</h6>
+		<div class="score col-12 mx-auto row" style="height: 50px; margin-top: 10px">
+			<div class="metal col-3 bg-light" style="height: 50px">
+				<h6>Железо</h6>
+				<span style="text-align: center;" class="iron">100</span>
+			</div>	
+			<div class="rifle col-3 bg-light" style="height: 50px">
+				<h6>Винтовки</h6>
+				<span style="text-align: center;" class="rifles">100</span>
+			</div>	
+			<div class="material col-3 bg-light" style="height: 50px">
+				<h6>Материалы</h6>
+				<span style="text-align: center;" class="material">100</span>
+			</div>	
+			<div class="equipment col-3 bg-light" style="height: 50px">
+				<h6>Снаряжение</h6>
+				<span style="text-align: center;" class="snaryaga">100</span>
+			</div>	
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+
+	let elem1 = document.querySelector(".elem1")
+
+	let elem2 = document.querySelector(".elem2")
+
+	let elem3 = document.querySelector(".elem3")
+
+	let csel1 = 5
+
+	let csel2 = 5
+
+	let csel3 = 10
+	
+	let warscore = 0
+
+	let startmenu = document.querySelector(".startmenu")
+
+	let event1 = document.querySelector(".event1")
+
+	let usi = document.querySelector(".usi")
+
+	let gei = document.querySelector(".gei")
+
+	let uki = document.querySelector(".uki")
+
+	let ussri = document.querySelector(".ussri")
+
+	let fri = document.querySelector(".fri")
+
+	let met = 100
+
+	let rif = 100
+
+	let mat = 100
+
+	let equ = 100
+
+	let btn = document.querySelector(".btn")
+
+	let btn1 = document.querySelector(".btn1")
+
+	let btn2 = document.querySelector(".btn2")
+
+	let zavody = document.querySelector(".zavody")
+
+	let shaft = document.querySelector(".shaft")
+
+	let fabrika = document.querySelector(".fabrika")
+
+	if (mat == 100) {
+		btn1.style.display = "block"
+		btn2.style.display = "block"
+	}
+	if (mat == 0) {
+		btn1.style.display = "block"
+	}
+
+
+
+	document.querySelector(".usa").onclick = function () {
+		startmenu.style.display = "none"
+		usi.style.display = "block"
+	}
+
+	document.querySelector(".ger").onclick = function () {
+		startmenu.style.display = "none"
+		gei.style.display = "block"
+	}
+
+	document.querySelector(".uk").onclick = function () {
+		startmenu.style.display = "none"
+		uki.style.display = "block"
+		alert()
+	}
+
+	document.querySelector(".ussr").onclick = function () {
+		startmenu.style.display = "none"
+		ussri.style.display = "block"
+	}
+
+	document.querySelector(".btn").onclick = function() {
+		csel1 = csel1 + 1
+		elem1.innerHTML = csel1
+		mat = mat - 200
+	}
+	document.querySelector(".btn1").onclick = function() {
+		csel2 = csel2 + 1
+		elem2.innerHTML = csel2
+		mat = mat - 100
+	}
+	document.querySelector(".btn2").onclick = function() {
+		csel3 = csel3 + 1
+		elem3.innerHTML = csel3
+		mat = mat - 10
+	}
+	document.querySelector(".france").onclick = function () {
+		startmenu.style.display = "none"
+		fri.style.display = "block"
+	}
+	document.querySelector(".poland").onclick = function () {
+		startmenu.style.display = "none"
+		pli.style.display = "block"
+	}
+
+	
+
+</script>
+</body>
+</html>
